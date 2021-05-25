@@ -1,12 +1,12 @@
-const Navbar = (props) => {
+const Navbar = ({totalCounters}) => {
   return (
     <>
       <nav className="navbar navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Navbar{" "}
+            Navbar
             <span className="badge badge-pill badge-secondary">
-              {props.totalCounters}
+              {totalCounters}
             </span>
           </a>
         </div>
@@ -14,6 +14,10 @@ const Navbar = (props) => {
     </>
   );
 };
+
+export default Navbar;
+
+
 // the above code is state less, that is why its created as function
 // import React, { Component } from "react";
 // class Navbar extends Component {
@@ -36,4 +40,3 @@ const Navbar = (props) => {
 //   }
 // }
 
-export default Navbar;
